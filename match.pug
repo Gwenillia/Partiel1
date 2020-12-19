@@ -9,9 +9,11 @@ html(lang="en")
     link(rel="icon" type="image/png" sizes="32x32" href="../Assets/Images/icons/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="../Assets/Images/icons/favicon-16x16.png")
     link(rel="icon" type="image/x-icon" href="../Assets/Images/icons/favicon.ico")
+    script(src="main.js")
+
   body.pageMatch
+    .lds-dual-ring
     include nav.pug
-    script(src="https://kit.fontawesome.com/c327878e2f.js" crossorigin="anonymous")
     
     main(class="match__container")
       h2 Match
@@ -26,3 +28,4 @@ html(lang="en")
             i(class="fas fa-plus-circle" title="En savoir plus")
             i(class="fas fa-comment-dollar" title="Faire une proposition")
             i(class="fas fa-eye-slash" title="Ne plus voir")
+    script(src="https://kit.fontawesome.com/c327878e2f.js" crossorigin="anonymous")
