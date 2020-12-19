@@ -1,0 +1,120 @@
+nav
+  background-color: #fff
+  border-bottom: .2rem solid rgba(64, 64, 64, 0.25)
+  padding: ($mobile-pm / 2) $mobile-pm
+  position: sticky
+  position: -webkit-sticky
+  top: 0
+  z-index: 5
+
+label[for="burger"] > svg, #burger, .lol
+  cursor: pointer
+
+.label__nav
+  position: absolute
+  visibility: hidden
+
+#burger
+  position: absolute
+  visibility: hidden
+#burger:checked ~ .nav
+  display: flex
+
+nav
+  display: flex
+  justify-content: space-between
+
+nav > a, nav > a:focus, nav > a:visited
+  font-family: 'Abril Fatface', cursive
+  color: $main-color
+  text-decoration: underline
+
+.nav
+  background: linear-gradient(103deg, $main-color50-bis 50%, rgba(255,255,255,1) 50%)
+  border-left: .1rem solid $main-text
+  display: none
+  flex-flow: column wrap
+  height: 100vh
+  padding: $mobile-pm / 2
+  position: fixed
+  right: 0
+  text-align: center
+  top: 0
+  width: 50%
+  p
+    margin-bottom: $mobile-pm / 2
+  input
+    text-indent: 1.5rem
+    border: .1rem solid $main-text
+    border-radius: .5rem
+    outline: none
+    padding: ($mobile-pm / 2.5) 0
+    &::placeholder
+      color: $main-text
+    &:first-of-type
+      margin-bottom: $mobile-pm /2
+    &:last-of-type
+      text-indent: 0
+      margin-bottom: $mobile-pm * 2
+      padding: ($mobile-pm / 2) $mobile-pm
+  input[name="remember"]
+    margin-top: 1rem
+  form
+    div
+      display: flex
+      flex-direction: column
+.navlink
+  text-transform: uppercase
+  font-weight: bold
+  line-height: 5rem
+
+@media screen and (min-width: 992px)
+  label[for="burger"], #burger
+    display: none
+  nav
+    align-items: center
+    padding: 1rem 5rem
+    .logo
+      font-size: 2rem
+    .nav
+      display: flex
+      position: static
+      align-content: center
+      border: none
+      flex-flow: row wrap
+      height: 4rem
+      width: 100%
+      background: none
+      padding: 0
+      margin: 0
+      justify-content: space-between
+      align-items: baseline
+      input, input[type="submit"]
+        padding: .2rem .2rem
+        margin: 0
+        transition: 0.1s ease-in
+        &:hover
+          background: $main-color
+        &:first-of-type
+          margin-left: 2rem
+          margin-bottom: 0
+      label[for="remember"]
+        font-size: 1rem
+        vertical-align: bottom
+        margin-right: 1rem
+        input
+          margin: 0
+      .navlink
+        a, a:active, a:focus, a:visited
+          color: $main-color
+          transition: 0.1s ease-in
+        a:hover
+          color: $main-text
+        ul
+          display: flex
+          flex-flow: row wrap
+          column-gap: $mobile-pm
+          line-height: normal
+      form
+        div
+          display: block

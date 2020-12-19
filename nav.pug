@@ -1,0 +1,24 @@
+nav
+  label(for="burger") 
+    i.fas.fa-bars
+  input(type="checkbox" name ="burger" id="burger")
+  a(class="logo" href="./index.html") HSM
+  .nav
+    form
+      div
+        label(for="email" class="label__nav") Email
+        input(type="email" placeholder="email" id="email" name="email" required)
+        label(for="password" class="label__nav") Password
+        input(type="password" placeholder="mot de passe" id="password" name="password" required)
+        label(for="remember") 
+          input(type="checkbox" name="remember" id="remember")
+          | se souvenir de moi
+        input(type="submit" value="Connexion")
+    .navlink
+      ul
+        li
+          a(href="./index.html") Acceuil
+        li
+          a(href="./match.html") Match
+        li
+          a(href="./inscription.html") S'inscrire

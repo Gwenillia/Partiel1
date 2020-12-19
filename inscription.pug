@@ -1,0 +1,51 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Partiel1
+    link(rel="stylesheet", href="../style.css")
+  body.pageInscription
+    include nav.pug
+    main(class="inscription")
+      div
+        h2 Inscription
+        form
+          .input__container
+            label(for="Nom") Nom
+            input(type="text" id="nom" name="nom" required)
+          .input__container
+            label(for="Prénom") Prénom
+            input(type="text" id="prenom" name="prenom" required)
+          .input__OB
+            label(for="dateOB") Date de naissance <br/>
+            input(type="date" id="dateOB" name="dateOB" value="dateNaissance" required)
+          .input__container
+            label(for="inscrMail") Email
+            input(type="email" id="inscrMail" name="inscrMail" required)
+          .input__container
+            label(for="pass") Mot de passe
+            input(type="password" id="pass" name="pass" required)
+          div
+            p Type de profil
+            .checked__container
+              label(class="radio__btn" for="eleveur") Éleveur
+                input(type="radio" id="eleveur" name="profil" value="eleveur" required)
+                span.checked
+            .checked__container
+              label(class="radio__btn" for="acheteur") Acheteur
+                input(type="radio" id="acheteur" name="profil" value="acheteur") 
+                span.checked
+          .input__container
+            label(for="CP") Code Postal
+            input(type="number" id="CP" name="codePostal" required)
+          div
+            label(for="how") Comment avez-vous découvert notre site ?
+            select(id="how" name="comment")
+              option(value="Google") Par Google
+              option(value="Facebook") Par votre Facebook
+              option(value="option4") Je suis passé par là j'y ai vu de la lumière
+              option(value="option5") Par le bouche à oreille
+          input(type="submit" value="S'inscrire")
+  
+  script(src="https://kit.fontawesome.com/c327878e2f.js" crossorigin="anonymous")

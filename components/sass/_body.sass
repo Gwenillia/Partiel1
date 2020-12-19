@@ -1,0 +1,219 @@
+header
+  position: relative
+  color: white
+  div:first-of-type
+    content: " "
+    width: 100%
+    height: 70vh
+    background: url('./Assets/images/horse.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-attachment: fixed
+    position: relative
+    &::before
+      width: 100%
+      height: 100%
+      content: " "
+      background-color: $main-color50
+      position: absolute
+  div:last-of-type
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+    padding: $mobile-pm
+    h1, h2
+      text-align: center
+    h2:last-of-type
+      margin-bottom: $mobile-pm * 2
+
+@media screen and (min-width: 992px)
+  header
+    div:last-of-type
+      padding-left: $desktop-pm
+      padding-right: $desktop-pm
+
+//page accueil
+main
+  padding: $mobile-pm
+  section
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    column-gap: $mobile-pm
+    align-items: center
+  article
+    cursor: pointer
+    position: relative
+    margin-bottom: $mobile-pm
+    padding-bottom: $mobile-pm
+    border-bottom: 0.1rem solid $main-text50
+    &:last-of-type
+      border-bottom: none
+    .article__pic
+      content: " "
+      background: url('./Assets/images/horses.jpg')
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      height: 20rem
+      width: 100%
+    .article__desc
+      padding: $mobile-pm
+      background-color: $main-color50
+      h3
+        margin-bottom: $mobile-pm / 2
+      h3, h4
+        display: inline-block
+
+@media screen and (min-width: 992px)
+  main
+    padding-left: $desktop-pm
+    padding-right: $desktop-pm
+    section
+      justify-content: center
+
+@media screen and (min-width: 1648px)
+  main
+    section
+      place-content: space-between
+      article:last-of-type, article:nth-child(6)
+        border-bottom: none
+
+//page inscription
+
+.inscription
+  background: $main-color50-bis
+  margin: 0
+  padding: 5rem 2rem 10rem 2rem
+  height: 100vh
+  h2
+    margin-top: $mobile-pm
+    text-align: center
+    margin-bottom: $mobile-pm * 2
+  label,p,h2
+    font-weight: bold
+
+  p
+    margin-bottom: $mobile-pm / 2
+  input, option, select
+    background: none
+    border-radius: .25rem
+    outline: none
+  input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="number"], option, select, input[value="S'inscrire"]
+    width: 100%
+  form
+    div:nth-child(3)
+      margin-bottom: $mobile-pm
+    .input__container
+      position: relative
+      margin-bottom: $mobile-pm
+      input
+        padding-top: $mobile-pm / 3
+        padding-bottom: $mobile-pm / 5
+        border: none
+        margin-top: $mobile-pm / 2
+        border-bottom: 0.1rem solid $main-text
+      label
+        position: absolute
+        top: -1.5rem
+    input[type="submit"]
+      padding: $mobile-pm / 2
+      margin-top: $mobile-pm
+      border: .1rem solid $main-text
+    #dateOB
+      margin-bottom: $mobile-pm
+      border: .1rem solid $main-text
+    input[type="radio"]:first-of-type
+      margin-bottom: $mobile-pm / 2
+    input[type="radio"]
+      visibility: hidden
+    .checked__container
+      position: relative
+      label
+        padding-left: 2.5rem
+        cursor: pointer
+      input:checked ~ .checked
+        background-color: #aa8f8d
+        border-color: #aa8f8d
+    .checked
+      cursor: pointer
+      content: " "
+      height: 1.5rem
+      width: 1.5rem
+      border: .1rem solid $main-text
+      border-radius: 50%
+      position: absolute
+      top: 0
+      left: 0
+      background: white
+      visibility: visible
+      transition: .1s ease-in
+
+@media screen and (min-width: 992px)
+  .inscription
+    padding-left: $desktop-pm
+    padding-right: $desktop-pm
+
+// match
+.match__container
+  height: 100vh
+  background: linear-gradient(-76deg, $main-color50-bis 50%, rgba(255,255,255,1) 50%)
+  color: $main-color
+  h2
+    font-size: 6rem
+    text-align: center
+  .card
+    margin: 0 auto 0 auto
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: center
+    max-width: 50rem
+    .card__picture
+      border-top-left-radius: .25rem
+      border-top-right-radius: .25rem
+      content: " "
+      width: 100%
+      height: 40rem
+      background: url("../Assets/Images/horse2.jpg")
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+  .card__content
+    border-bottom-left-radius: .25rem
+    border-bottom-right-radius: .25rem
+    background: white
+    padding: $mobile_pm / 2
+    display: flex
+    place-content: space-between
+    flex-flow: row wrap
+    column-gap: 5rem
+    &--desc
+      align-self: center
+      p:first-of-type
+        margin-bottom: $mobile-pm
+    &--icons
+      display: flex
+      flex-direction: column
+      width: 10rem
+      align-self: center
+      align-items: center
+      font-size: 3rem
+      svg
+        margin-bottom: 1rem
+        &:nth-of-type(even)
+          color: #D19F9C
+        &:last-of-type
+          color: #574240
+      svg, svg > path
+        cursor: pointer
+
+@media screen and (max-width: 365px)
+  .card__content
+    &--icons
+      margin-top: $mobile-pm
+      flex-direction: row !important
+      justify-content: space-around !important
+      width: 100% !important
