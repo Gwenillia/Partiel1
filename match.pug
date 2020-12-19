@@ -5,6 +5,10 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Partiel1
     link(rel="stylesheet", href="../style.css")
+    link(rel="apple-touch-icon" sizes="180x180" href="../Assets/Images/icons/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../Assets/Images/icons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../Assets/Images/icons/favicon-16x16.png")
+    link(rel="icon" type="image/x-icon" href="../Assets/Images/icons/favicon.ico")
   body.pageMatch
     include nav.pug
     script(src="https://kit.fontawesome.com/c327878e2f.js" crossorigin="anonymous")
@@ -19,6 +23,6 @@ html(lang="en")
             p 350 kg
             p 170cm
           .card__content--icons
-            i(class="fas fa-plus-circle")
-            i(class="fas fa-comment-dollar")
-            i(class="fas fa-eye-slash")
+            i(class="fas fa-plus-circle" title="En savoir plus")
+            i(class="fas fa-comment-dollar" title="Faire une proposition")
+            i(class="fas fa-eye-slash" title="Ne plus voir")
